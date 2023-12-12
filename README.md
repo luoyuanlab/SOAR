@@ -64,7 +64,7 @@ In the [`data_analysis/cell_typing/`](https://github.com/luoyuanlab/SOAR/tree/ma
 
 #### scRNA-seq reference identification and processing
 
-To identify scRNA-seq references for cell typing, users may utilize the [GEO query helper script](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_typing/reference/geo-download-scRNA-seq.py). [`process_reference_example.R`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_typing/reference/process_reference_example.R) is an example script for processing the downloaded scRNA-seq data. Please note that cell quality control needs to be performed case-by-case, i.e. the thresholds should be chosen manually based on the QC plots.
+To identify scRNA-seq references for cell typing, users may utilize the [GEO query helper script](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_typing/reference/geo-download-scRNA-seq.py). [`ref_data_processing_example.R`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_typing/reference/ref_data_processing_example.R) is an example script for processing the downloaded scRNA-seq data. Please note that cell quality control needs to be performed case-by-case, i.e. the thresholds should be chosen manually based on the QC plots.
 
 #### Cell type annotation
 
