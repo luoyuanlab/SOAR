@@ -114,3 +114,18 @@ To perform cell-type-specific SV analysis, use the script [`quest_SpatialDE_ct_s
 To perform neighborhood-based cell-cell interaction analysis, use the script [`adj-analysis.R`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_cell_interaction/neighborhood-based/adj-analysis.R). To run the analysis, use the command `./adj-analysis.R $sample_directory`.
 
 To perform distance-based cell-cell interaction analysis, run the bash script [`cci-analysis-COMMOT-DGE.sh`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/cell_cell_interaction/distance-based/cci-analysis-COMMOT-DGE.sh) to call different analysis scripts in the pipeline.
+
+### Drug screen
+
+Drug discovery anaysis are stored under [`data analysis/drug_discovery`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery)
+
+The four types of analysis are: 
+1. Differntially expresed genes. ['Scripts for deconvoluted and annotated samples'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE)
+   
+3. Protein-protein interaction. ['Script for batch generating PPI network of top 300 DEGs (last section of code)'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap1_drug_enrichment_perturbation_process_300ppi_create_batch.ipynb)
+   
+5. CMAP drug enrichment (Compounds with top positive/negative overall perturbation on a cell type) ['Script for batch processing pre-generated CMAP1 drug enrichment results (first section)'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap1_drug_enrichment_perturbation_process_300ppi_create_batch.ipynb) and ['script for running CMAP2 drug enrichment analysis for case study sample (first section)](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap2_drug_enrichment_perturbation_create_process_ds4a1.ipynb)
+   
+7. CMAP drug perturbation (network of top genes being positively/negatively perturbed by the compounds above) ['Script for batch processing pre-generated CMAP1 drug perturbation results (first section)'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap1_drug_enrichment_perturbation_process_300ppi_create_batch.ipynb) and ['script for creating CMAP2 drug perturbation network for case study sample (second section)](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap2_drug_enrichment_perturbation_create_process_ds4a1.ipynb)
+   
+* Note all drug discovery results will eventually transition to using CMAP2 data.
