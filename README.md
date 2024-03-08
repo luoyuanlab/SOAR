@@ -47,7 +47,7 @@ The barcode column of `coordinates.csv` should be exactly the same as the `count
 The overall flow of data analysis is as below.
 
 1. Perform [spatial clustering](#spatial-clustering)
-2. Perform whole-tissue [spatial variability analyis](#spatial-variability-analysis)
+2. Perform whole-tissue [spatial variability analysis](#spatial-variability-analysis)
 3. Check if the spatial transcriptomics technology is at single-cell level
 	* If so (e.g. MERFISH), perform [cell type annotation](#cell-type-annotation)
 	* If not (e.g. 10x Visium), perform [cell type deconvolution](#cell-type-deconvolution)
@@ -87,7 +87,7 @@ To identify scRNA-seq references for cell typing, users may utilize the [GEO que
                 * `aibs_mouse_ctx-hpf_10x_neuronal.RDS`
                 * `aibs_mouse_ctx-hpf_10x_non_neuronal.RDS`
                 * `supp.RData`
-        * This script also reads a table listing the DSID, species, and technology (`brain_DSID_list.txt`) and loop over its rows. Line 52 uses a hard-wired path to this file.
+        * This script also reads a table listing the DSID, species, and technology (`brain_DSID_list.txt`) and loops over its rows. Line 52 uses a hard-wired path to this file.
         * The annotations follow the [Common Cell Type Nomenclature (CCN)](https://portal.brain-map.org/explore/classes/nomenclature). `seurat_object[["cell_type_annotation"]]` contains the annotated subclasses, and `seurat_object[["cell_type_annotation_class"]]` contains the annotated classes (i.e., glutamatergic, GABAergic, or non_neuronal).
 </details>
 
@@ -117,10 +117,11 @@ To perform distance-based cell-cell interaction analysis, run the bash script [`
 
 ### Drug screen
 
-Scripts for drug discovery anaysis are stored under [`data analysis/drug_discovery`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery).
+Scripts for drug discovery analysis are stored under [`data analysis/drug_discovery`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery).
 
-The four types of analysis are: 
-1. Differntially expresed genes. ['Scripts for deconvoluted and annotated samples'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE).
+The four types of analysis are:
+
+1. Differential gene expression analysis. ['Scripts for deconvoluted and annotated samples'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE).
    
 3. Protein-protein interaction. ['Script for batch generating PPI network of top 300 DEGs (last section of code)'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap1_drug_enrichment_perturbation_process_300ppi_create_batch.ipynb).
    
