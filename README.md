@@ -121,11 +121,11 @@ Scripts for drug discovery analysis are stored under [`data analysis/drug_discov
 
 The four types of analysis are:
 
-1. Differential gene expression analysis. ['Scripts for deconvoluted and annotated samples'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE).
+1. Differential gene expression analysis. [`Scripts for deconvoluted and annotated samples`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE).
    
-3. Protein-protein interaction network for spatially variable, differentially expressed genes by cell type. ['Script for batch generating PPI network of top 300 DEGs'](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/ppi_deg_svg_sample_level.ipynb).
+3. Protein-protein interaction network for spatially variable, differentially expressed genes by cell type. [`Script for batch generating PPI network of top 300 DEGs`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/ppi_deg_svg_sample_level.ipynb).
    
-5. CMAP drug enrichment (compounds with top overall positive/negative perturbation on a cell type). ['Script for running CMAP L1000 drug enrichment on spaitally variable, differentially expressed gene sets](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/cmap2_drug_enrichment_perturbation_sample_level.ipynb).
+5. CMAP drug enrichment (compounds with top overall positive/negative perturbation on a cell type). [`Script for running CMAP L1000 drug enrichment on spaitally variable, differentially expressed gene sets`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/cmap2_drug_enrichment_perturbation_sample_level.ipynb).
    
-7. CMAP drug perturbation (top gene targets perturbed by the compounds above). ['Script for identifying CMAP2 drug perturbation for top inversely/positively enriched compounds](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap2_drug_enrichment_perturbation_sample_level.ipynb). 
+7. CMAP drug perturbation (top gene targets perturbed by the compounds above). [`Script for identifying CMAP2 drug perturbation for top inversely/positively enriched compounds`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/cmap2_drug_enrichment_perturbation_sample_level.ipynb). 
    
