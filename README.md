@@ -123,9 +123,9 @@ The four types of analysis are:
 
 1. Differential gene expression analysis. [`Scripts for deconvoluted and annotated samples`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE).
    
-2. Protein-protein interaction (PPI) network for spatially variable, differentially expressed (DE-SV) genes by cell type. [`Script for generating PPI network`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/PPI_Drug_Enrichment_Perturbation/ppi_quest.py).
+2. Protein-protein interaction (PPI) network for spatially variable, differentially expressed (DE-SV) genes by cell type. [`Script for generating PPI network`](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/drug_discovery/PPI_Drug_Enrichment_Perturbation/ppi_quest.py).
    
-3. CMAP L1000 drug enrichment (compounds with top overall positive/negative enrichment score on SV-DE gene sets of a cell type). [`Script for CMAP drug enrichment analysis`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/drug_screen_perturb_quest.py).
+3. CMAP L1000 drug enrichment (compounds with top overall positive/negative enrichment score on SV-DE gene sets of a cell type). [`Script for CMAP drug enrichment analysis`](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/drug_discovery/PPI_Drug_Enrichment_Perturbation/drug_screen_perturb_quest.py).
    
-4. CMAP L1000 drug perturbation (top gene targets perturbed by the top postiively/negatively enriched compounds). [`Script for CMAP drug perturbation analysis`](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/drug_discovery/DGE/drug_screen_perturb_quest.py) (contained in the same script as above).
+4. CMAP L1000 drug perturbation (top gene targets perturbed by the top postiively/negatively enriched compounds). [`Script for CMAP drug perturbation analysis`](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/drug_discovery/PPI_Drug_Enrichment_Perturbation/drug_screen_perturb_quest.py) (contained in the same script as above).
    
