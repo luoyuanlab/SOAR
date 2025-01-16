@@ -2,7 +2,7 @@
 Implementation of spatial clustering using gene expression and spatial location via the [STAGATE package](https://stagate.readthedocs.io/en/latest/index.html)
 - Requires `counts.csv` and `coordinates.csv` in the processed folder and a list of sample directories for running the shell scripts. 
 - Steps of running:
-    - Run [quest_stagate_jobarray.sh](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/spatial_clustering/quest_stagate_jobarray.sh) which compiles [quest_stagate_updated_jobarray.py](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/spatial_clustering/quest_stagate_updated_jobarray.py). When the previous step is finished run [quest_stagate_to_seurat_jobarray.sh](https://github.com/luoyuanlab/ST-dataset/blob/main/analysis/database_utilities/clustering/quest_stagate_jobarray.sh) and finally [quest_stagate_to_seurat_updated_jobarray.R](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/spatial_clustering/quest_stagate_to_seurat_updated_jobarray.R)
+    - Run [quest_stagate_updated_jobarray.py](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/spatial_clustering/quest_stagate_updated_jobarray.py) followed by [quest_stagate_to_seurat_updated_jobarray.R](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/spatial_clustering/quest_stagate_to_seurat_updated_jobarray.R)
         -  quest_stagate_updated_jobarray.py:
             - **Please note that your provided argument (read into `sample_dir`) should have a "/" at the end of the path.**
             - Reads counts and coordinates into AnnData object and keeps only spots that have coordinates. 
