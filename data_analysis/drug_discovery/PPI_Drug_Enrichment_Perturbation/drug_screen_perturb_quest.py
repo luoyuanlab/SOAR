@@ -1,3 +1,7 @@
+### Author: Jenny, Yadi
+###
+### Description: This script conducts drug enrichment and perturbation analysis on pathological samples using spatially variable and differentially expressed genes. Enrichment scores of CMAP perturbations for each cell type in the sample are saved. Gene perturbations of the top and bottom 500 compounds are also saved in a network format. 
+
 import numpy as np
 np.random.seed(1024)
 import pandas as pd
