@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-### Author: Jenny
+### Author: Jenny, Yiming
 ###
 ### Description: This script performs DGE analysis (single-cell level data)
 
