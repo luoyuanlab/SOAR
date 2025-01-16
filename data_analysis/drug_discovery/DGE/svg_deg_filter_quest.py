@@ -1,3 +1,7 @@
+### Author: Jenny
+###
+### Description: This script conducts protein-protein interaction analysis and builds interaction network for each cell type using spatially variable and differentially expressed genes. 
+
 import pandas as pd
 import os
 import sys
