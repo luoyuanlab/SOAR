@@ -278,7 +278,7 @@ def run_enrich_perturb(dsid, sampleid, deg_dir, cell_direc):
         cell_type_deg_z = z_score_df[z_score_df.index.isin(dge['gene'].tolist())]
         print('deg genes matched to cmap:',cell_type_deg_z.shape[0])
         get_perturb_zs(cell, 'INV', enrich_inv, dge, cell_type_deg_z)
-        get_perturb_zs(cell, 'POS', enrich_inv, dge, cell_type_deg_z)
+        get_perturb_zs(cell, 'POS', enrich_pos, dge, cell_type_deg_z)
         print('inv and pos perturb files saved, shapes:', len(os.listdir(perturb_dir+cell+'/INV/')),len(os.listdir(perturb_dir+cell+'/POS/')) )
         print('\n')
 
