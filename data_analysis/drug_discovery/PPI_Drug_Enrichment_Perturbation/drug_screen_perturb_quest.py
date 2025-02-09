@@ -1,8 +1,8 @@
-### Author: Jenny, Yadi
-###
-### Description: This script conducts drug enrichment and perturbation analysis on pathological samples using spatially variable and differentially expressed genes. Enrichment scores of CMAP perturbations for each cell type in the sample are saved. Gene perturbations of the top and bottom 500 compounds are also saved in a network format. 
-
+import cmapPy
+import cmapPy.pandasGEXpress.parse
+import json
 import numpy as np
+from collections import Counter
 np.random.seed(1024)
 import pandas as pd
 import statsmodels
@@ -15,6 +15,9 @@ import sys
 
 dsid = sys.argv[1]
 sampleid = sys.argv[2]
+# for single cell samples
+#deg_dir = '/projects/b1131/SpatialT/drug-target/'+dsid+'/'+sampleid+'/DGE_anno_SVG'
+# for deconv samples
 deg_dir = '/projects/b1131/SpatialT/drug-target/'+dsid+'/'+sampleid+'/DGE_dec_SVG'
 cell_direc = [i for i in os.listdir(deg_dir)]
 print('STARTING:', dsid, ' ', sampleid)
@@ -279,7 +282,7 @@ def run_enrich_perturb(dsid, sampleid, deg_dir, cell_direc):
         print('deg genes matched to cmap:',cell_type_deg_z.shape[0])
         get_perturb_zs(cell, 'INV', enrich_inv, dge, cell_type_deg_z)
         get_perturb_zs(cell, 'POS', enrich_pos, dge, cell_type_deg_z)
-        print('inv and pos perturb files saved, shapes:', len(os.listdir(perturb_dir+cell+'/INV/')),len(os.listdir(perturb_dir+cell+'/POS/')) )
+        print('inv and pos perturb files saved, shapes:', len(os.listdir(perturb_dir+cell+'/'+'INV/')),len(os.listdir(perturb_dir+cell+'/'+'POS/')) )
         print('\n')
 
 run_enrich_perturb(dsid, sampleid, deg_dir, cell_direc)
