@@ -1,7 +1,3 @@
-### Author: Jenny
-###
-### Description: This script conducts protein-protein interaction analysis and builds interaction network for each cell type using spatially variable and differentially expressed genes. 
-
 import pandas as pd
 import os
 import numpy as np
@@ -14,6 +10,9 @@ print('PPI analysis for: ', ds, sample)
 ppi_out_dir = '/projects/b1131/SpatialT/drug-target-cmap2-svg/'+ds+'/'+sample+'/PPI/'
 if not os.path.exists(ppi_out_dir):
     os.makedirs(ppi_out_dir)
+# for single cellular annotated samples
+#deg_dir = '/projects/b1131/SpatialT/drug-target/'+ds+'/'+sample+'/DGE_anno_SVG/'
+# for deconvoluted samples
 deg_dir = '/projects/b1131/SpatialT/drug-target/'+ds+'/'+sample+'/DGE_dec_SVG/'
 
 # read in gene reference and remove unformatted genes
