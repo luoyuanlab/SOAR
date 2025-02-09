@@ -11,7 +11,7 @@ Drug discovery analysis aims to identify repurposable and established compounds 
 
 - `Gene name mappings` (e.g., geneinfo_beta.txt and HGNC091923.txt) for mapping between gene IDs and symbols
 
-- `Cell-type level SV-DE genes` (e.g., dsid/sampleid/DGE_dec_SVG/). SVG can be generated from [script](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/spatial_variability), and DGE can be generated from the [script](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/drug_discovery/DGE). Filter is used to select spatially variable up and down DE gene sets with |log2fc| > 0.5 and q-value < 0.05. For cell types that don't have enough deconvoluted spots for SVG analysis, DGE results are used directly.
+- `Spatially variable (tissue level) cell type-specific differnetially expressed genes` (e.g., dsid/sampleid/DGE_dec_SVG/). SVG can be generated from [script](https://github.com/luoyuanlab/SOAR/tree/main/data_analysis/spatial_variability), and DGE can be generated from the [script](https://github.com/luoyuanlab/SOAR/blob/main/data_analysis/drug_discovery/DGE). Filter is used to select tissue-elevel spatially variable (q-value <0.1) up and down DE gene sets with |log2fc| > 0.5 and q-value < 0.05. For cell types that don't have enough deconvoluted spots for SVG analysis, DGE results are used directly.
 
 ### CMAP2 Enrichment Calculation
 - Gene set enrichment analysis (GSEA) is conducted on the resulting set of up and down DGE sets (10 <= gene set size <= 2000) for each CMAP compound perturbation. GSEA score difference between up and down DEG set is calculated as the enrichment score for the compound. P-value is calculated by comparing the proportion of enrichment score calculated from random gene rankings greater/less than the compound's enrichment score (depending on the sign). More information can be found at the Methods section of [manuscript](https://www.biorxiv.org/content/10.1101/2022.04.17.488596v3).
@@ -27,7 +27,7 @@ Drug discovery analysis aims to identify repurposable and established compounds 
 ### Input
 - `Human protein interactome` (e.g., Interactome.tsv'), which contains 350k pairs of PPIs. Maping of NCBI gene IDs and symbols can be done using HGNC reference (e.g., 'HGNC.tsv'). 
 
-- `Cell-type level SV-DE genes` similar to that required for drug screen. 
+- `Spatially variable (tissue level) cell type-specific differnetially expressed genes` similar to that required for drug screen. 
 
 ### PPI Network
 - Top 300 SV-DE genes with the highest absolute values is used to find matching PPIs in the interactome (both receiver and sender need to be from the top 300 DEG list).
